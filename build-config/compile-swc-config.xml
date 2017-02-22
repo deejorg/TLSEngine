@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flex-config>
+	
+	<target-player>11.7</target-player>
+	
+	<compiler>
+		<source-path>
+			<path-element>${basedir}/src</path-element>
+			<path-element>${basedir}/libs</path-element>
+		</source-path>
+		
+		<library-path>
+            <path-element>${basedir}/libs</path-element>
+        </library-path>
+	</compiler>
+	
+	<include-sources>
+		<path-element>${basedir}/src</path-element>
+		<!--<path-element>${basedir}/libs</path-element>-->
+	</include-sources>
+	
+	<output>${basedir}/bin/3LifeEngine.swc</output>
+  
+</flex-config>

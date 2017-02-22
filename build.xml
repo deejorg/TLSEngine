@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<project name="TLEngine" default="compile-swc" basedir=".">
+	
+	<property name="SDK_HOME" value="C:\Work\SDK\AIRSDK_Compiler"/>
+	<property name="BUILD_CONFIG" value="${basedir}/build-config"/>
+	
+    <target name="compile-swf">
+        <exec executable="${SDK_HOME}/bin/amxmlc.bat">
+			<arg value="+basedir=${basedir}"/>
+			<arg value="-load-config=${SDK_HOME}/frameworks/flex-config.xml"/>
+			<arg value="-load-config+=${BUILD_CONFIG}/compile-swf-config.xml"/>
+		</exec>
+    </target>
+	
+	<target name="compile-swc">
+        <exec executable="${SDK_HOME}/bin/acompc.bat">
+			<arg value="+basedir=${basedir}"/>
+			<arg value="-load-config=${SDK_HOME}/frameworks/flex-config.xml"/>
+			<arg value="-load-config+=${BUILD_CONFIG}/compile-swc-config.xml"/>
+		</exec>
+    </target>
+	
+	<target name="copy-to-snatch">
+		<copy file="${basedir}/bin/3LifeEngine.swc" tofile="C:\Work\Projects\2013\Snatch\libs\3LifeEngine.swc"/>
+	</target>
+	
+</project>

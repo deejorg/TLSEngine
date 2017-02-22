@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flex-config>
+	
+    <target-player>11.7</target-player>
+	
+    <compiler>
+        <source-path>
+            <path-element>${basedir}/src</path-element>
+			<path-element>${basedir}/libs</path-element>
+        </source-path>
+		
+		<debug>true</debug>
+		
+        <library-path>
+            <path-element>${basedir}/libs</path-element>
+        </library-path>
+    </compiler>
+	
+	<file-specs>
+		<path-element>${basedir}/src/Main.as</path-element>
+	</file-specs>
+	
+	<default-background-color>#FFFFFF</default-background-color>
+	<default-frame-rate>60</default-frame-rate>
+	<default-size>
+		<width>800</width>
+		<height>600</height>
+	</default-size>
+	
+	<output>${basedir}/bin/Main.swf</output>
+  
+</flex-config>
